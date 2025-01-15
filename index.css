@@ -45,6 +45,12 @@
 
 a {
   text-decoration: none;
+  color: #002545;
+  transition: all 2s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .hero {
@@ -169,9 +175,27 @@ button {
   font-weight: 400;
   line-height: 16.8px;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  cursor: pointer;
   color: #002545;
+  transition: all 1s ease-in-out;
+}
+
+button:hover {
+  background-color: #002545;
+  color: #fff;
+}
+
+.focus-line:hover p span {
+  animation: swing 2s infinite;
+}
+
+@keyframes swing {
+  0% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
 }
 
 .hero-sub p {
@@ -283,6 +307,7 @@ main {
   border-top: 1px solid #002545;
   display: grid;
   justify-items: end;
+  cursor: pointer;
   padding-top: 58px;
   margin-top: 30px;
 }
