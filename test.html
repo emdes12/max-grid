@@ -16,9 +16,19 @@
     </div>
   </body>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     .parent {
+      width: 100%;
+      background-color: yellowgreen;
+      padding: 80px;
+      grid-gap: 10px;
       display: grid;
-      grid-template-columns: repeat(auto-fill, 300px);
+      grid-template-columns: repeat(auto-fit, 600px);
     }
     .children {
       background-color: red;
@@ -27,9 +37,8 @@
       padding: 5px;
       border: 2px solid white;
     }
-    .child1 {
-        /* grid-column: 1 / 4; */
+    .child5 {
+      grid-column: 1;
     }
-    
   </style>
 </html>
